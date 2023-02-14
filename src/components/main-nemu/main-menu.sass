@@ -1,0 +1,25 @@
+@import '../../index.sass'  
+
+
+.main-menu__items
+    margin: 77px 30px 0 30px
+
+
+.main-menu__info
+    display: flex
+    flex-direction: column
+    margin: 219px 30px 30px 30px
+
+.info__link
+    text-decoration: none
+    cursor: default
+    &:not(:first-child)     //для всех элементов,кроме первого
+        margin-top: 20px
+    span
+        cursor: pointer
+        &:hover
+            border-bottom: 1px solid $light-gray
+        &:active
+            color: $blue
+            border-bottom: none
+    

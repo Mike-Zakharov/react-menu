@@ -1,0 +1,23 @@
+@import '../../index.sass'  
+
+.menu__item
+    display: flex
+    justify-content: space-between
+    padding: 2px 7px
+    cursor: pointer
+    text-decoration: none
+    
+    &:not(:first-child)     //для всех элементов,кроме первого
+        margin-top: 20px 
+
+    &:hover    
+        span
+            border-bottom: 2px solid $blue
+
+    &:active
+        span
+            color: $blue
+            border-bottom: none
+        
+        
+
