@@ -1,22 +1,24 @@
 import React from 'react';
 import './App.sass';
-import Promo from '../promo';
+import StartPage from '../start-page';
 import {  Routes, Route } from 'react-router-dom';
-import MainMenu from '../main-nemu'
-import Services from '../services';
-import ManagetIt from '../managed-it';
-import TelecomSolutions from '../telecom-solutions';
-import AboutUs from '../about-us';
+import MainMenu from '../main-menu'
+import Menu from '../menu'
+import Submenu from '../submenu';
+import InfoPage from '../info-page/info-page';
+
+
+
 
 function App() {
   return (
     <Routes>
-      <Route path='/' element = {<Promo />} exact />
-      <Route path = '/main-menu/*' element = {<MainMenu/>} exact />
-      <Route path='/main-menu/services' element = {<Services />} />
-      <Route path='/main-menu/managed-it' element = {<ManagetIt />} />
-      <Route path='/main-menu/telecom-solutions' element = {<TelecomSolutions />} />
-      <Route path='/main-menu/about-us' element = {<AboutUs />} />
+      <Route path='/' element = {<StartPage />} />
+      <Route path = 'main-menu' element = {<MainMenu/>} >
+        <Route index element = {<Menu/>} />
+        <Route path=':category' element = {<Submenu/>} />
+        <Route path=':category/:id' element = {<InfoPage/>}/>  
+      </Route>
     </Routes>
   );
 }

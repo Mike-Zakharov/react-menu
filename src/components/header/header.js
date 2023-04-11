@@ -11,7 +11,7 @@ const Header = () => {
             <Dropdown/>
             <div>
                 <Link to='/'><img src={close} alt='close'/></Link>
-            </div>
+            </div>    
         </header>
     )
 };
