@@ -4,17 +4,19 @@ import './components/styles-stuf/font/Golos-Text_Regular.css';
 import './index.sass';
 import App from './components/app';
 import { BrowserRouter } from 'react-router-dom';
-
-
+import { Provider } from 'react-redux';
+import store from './store/store';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
-  <React.StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </React.StrictMode>
+  <Provider store = { store }>
+    <React.StrictMode>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </React.StrictMode>
+  </Provider>
 );
 
 

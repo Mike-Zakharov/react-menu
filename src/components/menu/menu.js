@@ -17,10 +17,10 @@ const mainMenuItemsData = [
 
 const Items = mainMenuItemsData.map((item) => {
     return (
-        <MainMenuItem 
-        value={item.value}
-        id={item.id}
-        key={item.id}/>
+      <MainMenuItem 
+      value={item.value}
+      id={item.id}
+      key={item.id}/>
     )
 })
 
@@ -28,15 +28,15 @@ const Items = mainMenuItemsData.map((item) => {
 const Menu = () => {
 
   return (
-    <div>
-        <div className="main-menu__items">
-            { Items }
-        </div>  
-        <div className="main-menu__info">
-            <Link to="#" className="info__link title"><span>Contacts</span></Link>
-            <Link to="#" className="info__link title"><span>Search</span></Link>
-        </div>
-    </div>
+    <>
+      <div className="main-menu__items">
+          { Items }
+      </div>  
+      <div className="main-menu__info">
+          <Link to="/main-menu/about-us/contacts" className="info__link title"><span>Contacts</span></Link>
+          <Link to="#" className="info__link title"><span>Search</span></Link>
+      </div>
+    </>
   )
 }
 

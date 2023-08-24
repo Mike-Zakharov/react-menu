@@ -10,10 +10,11 @@ import InfoPage from '../info-page/info-page';
 
 
 
+
 function App() {
   return (
     <Routes>
-      <Route path='/' element = {<StartPage />} />
+      <Route path='/*' element = {<StartPage />} />
       <Route path = 'main-menu' element = {<MainMenu/>} >
         <Route index element = {<Menu/>} />
         <Route path=':category' element = {<Submenu/>} />
